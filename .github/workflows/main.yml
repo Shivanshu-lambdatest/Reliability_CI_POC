@@ -1,5 +1,4 @@
 on: [push]
-branch: main
 
 jobs:
   hello_world_job:
