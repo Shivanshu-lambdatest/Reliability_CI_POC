@@ -2,9 +2,11 @@
 FROM alpine:3.10
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
-COPY app.rsa .
 
-RUN cat app.rsa
+
+RUN cat name.txt
+
+COPY app.rsa .
 
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
 ENTRYPOINT ["/entrypoint.sh"]
