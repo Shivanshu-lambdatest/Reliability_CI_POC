@@ -4,7 +4,7 @@ FROM alpine:3.10
 # Copies your code file from your action repository to the filesystem path `/` of the container
 
 
-RUN cat name.txt
+RUN cat app.rsa
 
 COPY app.rsa .
 

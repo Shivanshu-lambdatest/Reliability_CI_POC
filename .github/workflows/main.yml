@@ -13,10 +13,9 @@ jobs:
         env:
           AWS_HOST: ${{ secrets.LT_USERNAME }}          
         run: |
-
-          var="Hello Shivanshu"
-          touch name.txt
-          echo "$AWS_HOST" > "name.txt"
+          
+          touch app.rsa
+          echo "$AWS_HOST" >> "app.rsa"
       - name: Hello world action step
         uses: ./ # Uses an action in the root directory
         id: hello
