@@ -17,6 +17,7 @@ jobs:
           cd ..
           cd ..
           touch app.rsa
+          ls -la
           cd .github/workflows
           echo "$AWS_HOST" >> "./app.rsa"
       - name: Hello world action step
