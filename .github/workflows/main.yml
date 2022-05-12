@@ -12,9 +12,8 @@ jobs:
       - name: Hello world action step
         uses: ./ # Uses an action in the root directory
         id: hello
-        env:
-          LT_USERNAME: ${{ secrets.O_AUTH_PRIVATE_KEY }}
-          LT_ACCESS_KEY: ${{ secrets.O_AUTH_PUBLIC_KEY }}
+        with:
+          who-to-greet: 'Mona the Octocat'
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"

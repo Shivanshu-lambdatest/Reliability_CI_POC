@@ -2,7 +2,7 @@
 name: 'Hello World'
 description: 'Greet someone and record the time'
 inputs:
-  LT_USERNAME:  # id of input
+  who-to-greet:  # id of input
     description: 'Who to greet'
     required: true
     default: 'World'
@@ -13,4 +13,4 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    LT_USER: ${{ inputs.LT_USERNAME }}
+    - ${{ inputs.who-to-greet }}
