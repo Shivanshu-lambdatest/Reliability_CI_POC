@@ -13,4 +13,4 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.LT_USERNAME }}
+    LT_USER: ${{ inputs.LT_USERNAME }}
