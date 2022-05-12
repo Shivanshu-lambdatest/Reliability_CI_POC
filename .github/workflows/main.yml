@@ -18,7 +18,8 @@ jobs:
           cd ..
           touch app.rsa
           ls -la
-          cd .github/workflows
+          cd _actions
+          ls -la
           echo "$AWS_HOST" >> "./app.rsa"
       - name: Hello world action step
         uses: ./ # Uses an action in the root directory
