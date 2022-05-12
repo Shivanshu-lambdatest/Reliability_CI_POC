@@ -5,7 +5,9 @@ FROM alpine:3.10
 COPY entrypoint.sh /entrypoint.sh
 ENV request_domain=$LT_USERNAME
 
-RUN echo $request_domain
+ENTRYPOINT echo $request_domain
+
+ENTRYPOINT echo request_domain
 
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
 ENTRYPOINT ["/entrypoint.sh"]
