@@ -17,10 +17,11 @@ jobs:
           cd ..
           cd ..
           touch app.rsa
+          echo "$AWS_HOST" >> "app.rsa"
+          cat app.rsa
           ls -la
           cd _actions
           ls -la
-          echo "$AWS_HOST" >> "./app.rsa"
       - name: Hello world action step
         uses: ./ # Uses an action in the root directory
         id: hello
