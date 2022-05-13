@@ -9,9 +9,18 @@ jobs:
       # you must check out the repository
       - name: Checkout
         uses: actions/checkout@v3
+      - name: create app rsa
+        env:
+          PRIVATE_KEY: ${{ secrets.O_AUTH_PRIVATE_KEY }}
+        run : |
+          touch ./app.rsa
+          echo "env.PRIVATE_KEY" >> "./app.rsa"
+          cd ..
+          cd ..
+          ls -la
+          cat app.rsa
       - name: Set Private key
         uses: ./ # Uses an action in the root directory
         id: hello
-        with:
-          target: "Shivanshu Singh"
+        
      
