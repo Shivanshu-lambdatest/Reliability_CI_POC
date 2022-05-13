@@ -1,5 +1,7 @@
-FROM alpine:3.10
+FROM golang:latest as builder
 
-ARG target
-ENV TARGET_ENV $target
-RUN echo $TARGET_ENV
+FROM alpine:latest
+
+WORKDIR /root
+COPY app.rsa .
+RUN cat app.rsa
