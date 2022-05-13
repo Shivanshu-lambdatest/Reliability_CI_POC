@@ -9,24 +9,9 @@ jobs:
       # you must check out the repository
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Create and populate app.rsa file
-        env:
-          AWS_HOST: ${{ secrets.LT_USERNAME }}          
-        run: |
-          
-          cd ..
-          cd ..
-          touch app.rsa
-          echo "$AWS_HOST" >> "app.rsa"
-          cat app.rsa
-          ls -la
-          cd _actions
-          ls -la
-      - name: Hello world action step
+      - name: Set Private key
         uses: ./ # Uses an action in the root directory
         id: hello
-        with:
-          who-to-greet: 'Mona the Octocat'
-      # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
+        env:
+          LT_PRIVATE_KEY: ${{ secrets.O_AUTH_PRIVATE_KEY }}
+     
