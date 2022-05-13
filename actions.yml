@@ -13,4 +13,4 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ env.LT_PRIVATE_KEY }}
+    - 'test user shivanshu'

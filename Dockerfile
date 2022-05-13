@@ -1,7 +1,7 @@
 # Container image that runs your code
 FROM alpine:3.10
 
-# ARG pvt_key
+ARG LT_PRIVATE_KEY
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 
@@ -11,7 +11,7 @@ FROM alpine:3.10
 
 ENV pvt_key "$LT_PRIVATE_KEY"
 
-ENTRYPOINT echo $pvt_key
+# ENTRYPOINT echo $pvt_key
 
 RUN echo $pvt_key
 
