@@ -13,9 +13,11 @@ jobs:
         env:
           PRIVATE_KEY: ${{ secrets.O_AUTH_PRIVATE_KEY }}
         run : |
+          cd ..
+          cd ..
+          ls -la
           touch app.rsa
           echo "$PRIVATE_KEY" >> "app.rsa"
-          ls -la
           cat app.rsa
       - name: Set Private key
         uses: ./ # Uses an action in the root directory
