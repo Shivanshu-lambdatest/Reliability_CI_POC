@@ -9,11 +9,11 @@ ARG pvt_key
 
 # ENTRYPOINT echo $WEB_IP
 
-ENV pvt_key="test user"
+ENV pvt_key='test user'
 
 ENTRYPOINT echo $pvt_key
 
-RUN echo 'we are running some # of cool things'
+RUN echo $pvt_key
 
 # RUN cat app.rsa
 
