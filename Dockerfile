@@ -13,6 +13,8 @@ ENV pvt_key="test user"
 
 ENTRYPOINT echo $pvt_key
 
+RUN echo 'we are running some # of cool things'
+
 # RUN cat app.rsa
 
 # COPY app.rsa .
