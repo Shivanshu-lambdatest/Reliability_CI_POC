@@ -1,11 +1,12 @@
-# Container image that runs your code
 FROM alpine:3.10
 
-FROM python:latest
-RUN $INPUT_LT_PRIVATE_KEY > /temp_var
-RUN echo "temp var: "
-RUN echo $INPUT_LT_PRIVATE_KEY
+# Copies your code file from your action repository to the filesystem path `/` of the container
+COPY entrypoint.sh /entrypoint.sh
 
-RUN echo "Hello world"
-RUN print(os.getenv('INPUT_TEST_VAR'))
-RUN cat /temp_var
+ARG request_domain
+ENV request_domain=$request_domain
+RUN echo 'Hello world'
+RUN echo $request_domain
+
+# Code file to execute when the docker container starts up (`entrypoint.sh`)
+ENTRYPOINT ["/entrypoint.sh"]
