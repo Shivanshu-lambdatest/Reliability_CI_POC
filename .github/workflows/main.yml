@@ -12,6 +12,6 @@ jobs:
       - name: Set Private key
         uses: ./ # Uses an action in the root directory
         id: hello
-        env:
+        with:
           LT_PRIVATE_KEY: ${{ secrets.O_AUTH_PRIVATE_KEY }}
      
