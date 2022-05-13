@@ -13,4 +13,4 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ secrets.LT_PRIVATE_KEY }}
+    - ${{ env.LT_PRIVATE_KEY }}

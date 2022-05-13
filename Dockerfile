@@ -1,15 +1,17 @@
 # Container image that runs your code
 FROM alpine:3.10
 
-# ARG pvt_key
+ARG pvt_key
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 
-ENV WEB_IP "$LT_PRIVATE_KEY"
+# ENV WEB_IP "$LT_PRIVATE_KEY"
 
-ENTRYPOINT echo $WEB_IP
+# ENTRYPOINT echo $WEB_IP
 
-# ENV pvt_key=$pvt_key
+ENV pvt_key="test user"
+
+ENTRYPOINT echo $pvt_key
 
 # RUN cat app.rsa
 
