@@ -12,6 +12,6 @@ jobs:
       - name: Set Private key
         uses: ./ # Uses an action in the root directory
         id: hello
-        with:
-          private_key: "Shivanshu Singh"
+        env:
+          target: "Shivanshu Singh"
      

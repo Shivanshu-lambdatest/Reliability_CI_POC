@@ -1,4 +1,2 @@
-FROM ubuntu:latest
-ARG private_key
-ENV an_env_var=$private_key
-RUN echo $an_env_var
+ENV TARGET_ENV $INPUT_TARGET
+RUN echo $TARGET_ENV
