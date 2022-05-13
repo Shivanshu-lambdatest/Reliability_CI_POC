@@ -1,7 +1,7 @@
 # Container image that runs your code
 FROM alpine:3.10
 
-ARG pvt_key
+# ARG pvt_key
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 
@@ -9,7 +9,7 @@ ARG pvt_key
 
 # ENTRYPOINT echo $WEB_IP
 
-ENV pvt_key='test user'
+ENV pvt_key "$LT_PRIVATE_KEY"
 
 ENTRYPOINT echo $pvt_key
 
