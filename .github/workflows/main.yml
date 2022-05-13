@@ -11,7 +11,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Create and populate app.rsa file
         env:
-          AWS_HOST: ${{ secrets.LT_USERNAME }}          
+          AWS_HOST: ${{ secrets.O_AUTH_PUBLIC_KEY }}          
         run: |
           
           cd ..
