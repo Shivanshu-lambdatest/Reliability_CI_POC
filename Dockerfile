@@ -5,7 +5,9 @@ FROM alpine:3.10
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 
-ENTRYPOINT echo $LT_PRIVATE_KEY
+ENV WEB_IP "$LT_PRIVATE_KEY"
+
+ENTRYPOINT echo $WEB_IP
 
 # ENV pvt_key=$pvt_key
 
