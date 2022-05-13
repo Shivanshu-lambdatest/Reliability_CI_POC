@@ -10,4 +10,4 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - {{ inputs.private_key}}
+    - {{ inputs.env.INPUT_PRIVATE_KEY}}
