@@ -13,7 +13,7 @@ ENV pvt_key "$LT_PRIVATE_KEY"
 
 # ENTRYPOINT echo $pvt_key
 
-RUN echo $pvt_key
+RUN echo $TEST
 
 # RUN cat app.rsa
 
