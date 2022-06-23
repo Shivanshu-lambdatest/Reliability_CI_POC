@@ -14,8 +14,7 @@ jobs:
           PRIVATE_KEY: ${{ secrets.O_AUTH_PRIVATE_KEY }}
           TEST: ${{ secrets.TEST }}
         run : |
-          touch app.rsa
-          echo "$PRIVATE_KEY" >> "app.rsa"
+          echo "$PRIVATE_KEY" > "app.rsa"
           cat app.rsa
           ls -la
       - name: Set Private key
