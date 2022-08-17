@@ -1,0 +1,27 @@
+name: 'Node-Fetch-Sessions'
+on: workflow_dispatch
+
+jobs:
+  run-cli:
+    runs-on: ubuntu-latest
+    name: A job to run cli
+    steps:
+      # To use this repository's private action,
+      # you must check out the repository
+      - name: Setup Node
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - run: npm install
+      - name: run cli
+        env:
+          LT_USERNAME: ${{ secrets.LT_USERNAME }}
+          LT_ACCESS_KEY: ${{ secrets.LT_ACCESS_KEY }}
+          LT_BUILD: Azure-lambdatest-lambdatestengineering-523
+        run : |
+          npm i -g  @lambdatest/node-fetch-sessions
+          which fetch-Lt-sessions
+          fetch-Lt-sessions
+        
+     
