@@ -20,7 +20,6 @@ jobs:
           LT_BUILD: Azure-lambdatest-lambdatestengineering-523
         run : |
           npm i -g  @lambdatest/node-fetch-sessions
-          which fetch-Lt-sessions
           fetch-Lt-sessions
         
      
