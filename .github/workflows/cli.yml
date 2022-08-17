@@ -19,7 +19,7 @@ jobs:
           LT_ACCESS_KEY: ${{ secrets.LT_ACCESS_KEY }}
           LT_BUILD: Azure-lambdatest-lambdatestengineering-523
         run : |
-          npm i -g  @lambdatest/node-fetch-sessions
+          npm i @lambdatest/node-fetch-sessions
           fetch-Lt-sessions
         
      
