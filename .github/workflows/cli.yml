@@ -1,22 +1,19 @@
-name: 'Node-Fetch-Sessions'
-on: push
+on: [push]
 
 jobs:
-  run-cli:
+  hello_world_job:
     runs-on: ubuntu-latest
-    name: A job to run cli job
+    name: A job to say hello
     steps:
       # To use this repository's private action,
       # you must check out the repository
       - name: Checkout
         uses: actions/checkout@v3
-        
-      - name: Setup Node
-      - uses: actions/setup-node@v2
+      - name: setup node
+        uses: actions/setup-node@v2
         with:
           node-version: 14
-          
-      - name: run cli
+      - name: Execute cli
         env:
           LT_USERNAME: ${{ secrets.LT_USERNAME }}
           LT_ACCESS_KEY: ${{ secrets.LT_ACCESS_KEY }}
