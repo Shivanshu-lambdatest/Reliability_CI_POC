@@ -4,7 +4,7 @@ on: push
 jobs:
   run-cli:
     runs-on: ubuntu-latest
-    name: A job to run cli
+    name: A job to run cli job
     steps:
       # To use this repository's private action,
       # you must check out the repository
